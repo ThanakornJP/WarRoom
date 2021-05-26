@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Spiritual War Room</title>
+        <script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react.js"></script>
+        <script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+        <script src="bindle.js"></script>
+        <script>
+            const greeter = require('./Greeter.js');
+            document.getElementById('container').appendChild(greeter());
+        </script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <script>
+            class Hello extends React.Component {
+                render() {
+                    return React.createElement("div", null, "Hello ", this.props.name); 
+                }
+            }
+
+            ReactDOM.render(
+                React.createElement(Hello, {name: "Cz"}),
+                document.getElementById('container')
+            );
+        </script>
+        <script type="text/jsx">
+            
+            /*
+            class Hello extends React.Component {
+                render(){
+                    return (<div> Hello {this.props.name} </div>);
+                }
+            }
+            
+
+            var HelloMessage = React.createClass({
+                render: function(){
+
+                    return React.createElement("h1",null, "Hellow World!, This is ", this.props.name);
+                }
+            });*/
+            /*
+            ReactDOM.render(
+                <Hello name="World" />, document.getElementById('container')
+            );
+            
+            ReactDom.render(
+                React.createElement(HelloMessage, {name: "Cheer"}),
+                document.getElementById('container')
+            );*/
+
+        </script>
+    </body>
+</html>
